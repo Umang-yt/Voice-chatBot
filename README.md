@@ -3,7 +3,9 @@ A basic Python voice-based assistant that listens to your speech, converts it in
 
 
 🎤 Powered by Google Speech Recognition
+
 🔊 Speaks back using pyttsx3 
+
 🚀 Minimalist CLI-based prototype
 
 
@@ -15,6 +17,9 @@ A basic Python voice-based assistant that listens to your speech, converts it in
 
 # 🛠️ Tech Stack
 🐍 Python 3
+
 🎤 SpeechRecognition
+
 🔊 pyttsx3
+
 🧠 Google Web Speech API (via recognize_google)
