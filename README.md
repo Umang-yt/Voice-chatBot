@@ -6,7 +6,7 @@ A basic Python voice-based assistant that listens to your speech, converts it in
 🚀 Minimalist CLI-based prototype
 
 
-#🧠 How It Works
+# 🧠 How It Works
 Listens to your voice input via microphone 🎙️
 Converts speech to text using recognize_google() via the SpeechRecognition library
 Responds audibly using pyttsx3
