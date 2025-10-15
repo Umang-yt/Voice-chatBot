@@ -1,0 +1,28 @@
+import os
+from github import Github
+
+# ---------- CONFIGURATION ----------
+GITHUB_TOKEN = "your_github_personal_access_token"
+REPO_NAME = "voice-chatbot"
+PROJECT_PATH = r"C:\Users\YourName\Desktop\voice_chatbot"
+COMMIT_MESSAGE = "Initial commit: Voice Chatbot Project"
+# -----------------------------------
+
+# Authenticate with GitHub
+g = Github(GITHUB_TOKEN)
+user = g.get_user()
+
+# Create a new repository on GitHub
+repo = user.create_repo(REPO_NAME)
+print(f" Created GitHub repo: {repo.html_url}")
+
+# Initialize git locally and push
+os.chdir(PROJECT_PATH)
+os.system("git init")
+os.system("git add .")
+os.system(f'git commit -m "{COMMIT_MESSAGE}"')
+os.system(f"git branch -M main")
+os.system(f"git remote add origin https://github.com/{user.login}/{REPO_NAME}.git")
+os.system("git push -u origin main")
+
+print(" Upload complete!")
